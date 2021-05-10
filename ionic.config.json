@@ -1,0 +1,7 @@
+{
+  "name": "projetohibrido",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

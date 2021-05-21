@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Email
+    <ion-input type="text" [(ngModel)]="email" placeholder="Digite seu email"></ion-input>
+  </ion-label>
+  <ion-label>Senha
+    <ion-input type="password" [(ngModel)]="senha" placeholder="Digite sua senha"></ion-input>
+  </ion-label>
+  <ion-button (click)="registrar()">Registrar</ion-button>
+</ion-content>

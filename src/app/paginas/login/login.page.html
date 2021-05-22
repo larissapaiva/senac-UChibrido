@@ -1,17 +1,22 @@
-<ion-header>
+<ion-header  [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title><b>Login</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-label>Email
-    <i class="icon ion-android-person placeholder-icon"></i>
-    <ion-input type="text" [(ngModel)]="email" placeholder="E-mail"></ion-input>
-  </ion-label>
-  <ion-label>Senha
-    <i class="icon ion-android-lock placeholder-icon"></i>
-    <ion-input type="password" [(ngModel)]="senha" placeholder="Senha"></ion-input>
-  </ion-label>
-  <ion-button (click)="logar()">Logar</ion-button>
+
+  <ion-item>
+    <ion-label position="floating" color="danger"><ion-icon name="person-sharp"></ion-icon></ion-label>
+    <ion-input type="text" [(ngModel)]="email" placeholder="E-mail" ></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-item>
+    <ion-label position="floating" color="danger"><ion-icon name="lock-closed-sharp"></ion-icon></ion-label>
+    <ion-input  type="password" [(ngModel)]="senha" placeholder="Senha"></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-button shape="round" fill="outline" color="danger" (click)="logar()">Logar</ion-button>
 </ion-content>

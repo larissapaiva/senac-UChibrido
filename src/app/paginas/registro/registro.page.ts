@@ -1,4 +1,4 @@
-import { from } from 'rxjs';
+
 import { Component, OnInit } from '@angular/core';
 import { AutenticacaoService} from '../../servicos/autenticacao.service';
 
@@ -10,8 +10,10 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
+  nome: string;
   email: string;
   senha: string;
+
   constructor(
     private servico: AutenticacaoService, private nav:NavController) { }
 
@@ -20,8 +22,10 @@ export class RegistroPage implements OnInit {
 
   registrar(){
     let usuario = {};
+    usuario['nome'] = this.nome;
     usuario['email'] = this.email;
     usuario['senha'] = this.senha;
+
     
     this.servico.registrar(usuario).then(
       resolve => {
